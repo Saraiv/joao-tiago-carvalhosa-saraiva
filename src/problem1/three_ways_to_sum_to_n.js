@@ -12,7 +12,7 @@
 const sum_to_n_a = (n) => {
 	// Probably the easiest way to execute this function 
 	let sum = 0
-	while(n !== 0){
+	while (n !== 0) {
 		sum += n
 		n--
 	}
@@ -21,15 +21,17 @@ const sum_to_n_a = (n) => {
 
 const sum_to_n_b = (n) => {
 	// A more challenging and fun approch would be recursive 
-	if(n <= 1){
+	if (n <= 1) {
 		return n
 	}
 	return n + sum_to_n_b(n - 1)
 }
 
 const sum_to_n_c = (n) => {
-	// TODO
+	// For this one I used an arithmetic formula
+	return n * (n + 1) / 2
 }
 
 console.log(sum_to_n_a(5))
 console.log(sum_to_n_b(5))
+console.log(sum_to_n_c(5))
